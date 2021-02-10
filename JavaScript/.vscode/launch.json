@@ -4,13 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+
         
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "arrow-function-exercise-1.html",
-            "file": "c:\\Users\\Farhan\\JavaScript\\09-Feb-2021\\arrow-function-exercise-1.html"
+            "name": "jumping-letter.html",
+            "file": "c:\\Users\\Farhan\\JavaScript\\10-Feb-2021\\jumping-letter.html"
         }
     ]
 }
