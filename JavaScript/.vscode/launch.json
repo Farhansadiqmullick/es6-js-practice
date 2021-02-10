@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         
+        
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "array-sum-and-every.html",
-            "file": "c:\\Users\\Farhan\\JavaScript\\08-Feb-2021\\array-sum-and-every.html"
+            "name": "arrow-function-exercise-1.html",
+            "file": "c:\\Users\\Farhan\\JavaScript\\09-Feb-2021\\arrow-function-exercise-1.html"
         }
     ]
 }
