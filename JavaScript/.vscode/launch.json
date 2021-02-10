@@ -4,11 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open array-this.html",
-            "file": "c:\\Users\\Farhan\\JavaScript\\array-this.html"
+            "name": "array-sum-and-every.html",
+            "file": "c:\\Users\\Farhan\\JavaScript\\08-Feb-2021\\array-sum-and-every.html"
         }
     ]
 }
