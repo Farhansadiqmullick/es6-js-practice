@@ -1,0 +1,27 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chaining Promises</title>
+</head>
+<body>
+<script>
+  const weather = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ temp: 24, conditions: 'Cold with Haze Weather'});
+    }, 2000);
+  });
+
+  const tweets = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(['I like Kacchi', 'BBQ is good too!']);
+    }, 500);
+  });
+
+  Promise
+    .all([weather, tweets])
+    .then(responses => {
+      const [weatherInfo, tweetInfo] = responses;
+      console.log(weatherInfo, tweetInfo)
+    });

@@ -4,12 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+
+
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "chaining-the-promises.html",
-            "file": "c:\\Users\\Farhan\\JavaScript\\11th-Feb-2021\\chaining-the-promises.html"
+            "name": "multiple-promises.html",
+            "file": "C:\\Users\\Farhan\\JavaScript\\12th-feb-2021\\multiple-promises.html"
         }
     ]
 }
