@@ -1,0 +1,285 @@
+/*==============================================
+Comment list and form
+==============================================*/
+.comments-section{
+    margin-top: 50px;
+}
+
+.post-module-title{
+    font-size: 17px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: relative;
+    &:before{
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        border-left: 0;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #2c2f34;
+    }
+    &:after{
+        content: "";
+        background: #2c2f34;
+        width: 40px;
+        height: 2px;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
+}
+
+.comment-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment{
+    display: block;
+    .comment-body{
+        display: block;
+        position: relative;
+        padding-left: 90px;
+        margin-bottom: 40px;
+        .comment-author{            
+            &:after{
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .avatar{
+                width: 70px;
+                border-radius: 35px;
+                overflow: hidden;
+                box-shadow: 0 0 8px #e0e7f1;
+                border: 2px solid #ffffff;
+                margin-right: 20px;
+                position: absolute;
+                top: 6px;
+                left: 0;
+            }
+            .fn{
+                color: #333333;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 32px;
+                font-style: normal;
+                a{
+                    color: inherit;
+                    line-height: inherit;
+                    &:hover{
+                        color: $themePrimary;
+                    }
+                }
+            }
+            .says{
+                display: none;
+            }
+        }
+
+        .comment-meta{
+            color: #333;
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            a{
+                color: inherit;
+                &:hover{
+                    color: $themePrimary;
+                }
+            }
+        }
+
+        .comment-reply-link{
+            background-color: $textPrimary;
+            color: #ffffff;
+            padding: 0 10px;
+            line-height: 25px;
+            border-radius: 2px;
+            display: inline-block;
+            font-size: 13px;
+        }
+    }
+    .children{
+        padding-left: 80px;
+    }
+    .comment-respond{
+        padding-left: 90px;
+        margin-bottom: 40px;
+    }
+}
+
+.comment-body{
+    p{
+        font-size: 13px;
+        line-height: 21px;
+        margin-bottom: 7px;
+    }
+    ul{
+        list-style: initial;
+        padding-left: 17px;
+        margin-bottom: 20px;
+        ul, ol{
+            margin-bottom: 0;
+        }
+    }
+
+    ol{
+        padding-left: 17px;
+        margin-bottom: 20px;
+        ul, ol{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.comment-navigation{
+    display: flex;
+    justify-content: space-between;
+    .nav-previous,
+    .nav-next{
+        a{
+            color: #2c2f34;
+            padding: 8px 15px;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;  
+            margin-bottom: 25px;
+            &:hover{
+                color: $themePrimary;
+            }
+        }
+    }
+}
+
+.comment-reply-title{
+    font-size: 17px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: relative;
+    &:before{
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        border-left: 0;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #2c2f34;
+    }
+    &:after{
+        content: "";
+        background: #2c2f34;
+        width: 40px;
+        height: 2px;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
+    small{
+        float: right;
+        a{
+            color: $textPrimary;
+            &:hover{
+                color: $themePrimary;
+            }
+        }
+    }
+}
+
+.comment-notes{
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.logged-in-as{
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 21px;
+}
+.comment-form{
+    label{
+        display: block;
+        width: 100%;
+        line-height: 30px;
+        font-weight: 700;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 10px;
+    }
+    [type=checkbox] {
+        vertical-align: middle;
+        + label{
+            display: inline;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+    }
+    input:not([type=checkbox]),
+    textarea{
+        width: 100%;
+        line-height: 23px;
+        border: 1px solid rgba(0,0,0,0.1);
+        color: #2c2f34;
+        border-radius: 2px;
+        font-size: 13px;
+        padding: 5px;
+        transition: background 0.3s, border 0.3s;
+        background-color: transparent;
+        margin: 0;
+        vertical-align: middle;
+        &:focus{
+            background-color: rgba(0,0,0,0.03);
+        }
+    }
+    [type=submit]{
+        width: auto;
+        position: relative;
+        background-color: $themePrimary;
+        color: #fff;
+        padding: 7px 15px;
+        margin: 15px 0 0;
+        font-weight: normal;
+        font-size: 13px;
+        display: inline-block;
+        text-align: center;
+        line-height: 21px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        vertical-align: middle;
+        transition: 0.3s;
+        border-radius: 2px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &:focus,
+        &:hover{
+            box-shadow: none;
+            outline: none;
+            border: none;
+            background-color: darken($themePrimary, 10);
+        }
+    }
+    .form-submit{
+        margin: 0;
+    }
+}
+
+.give-your-reply{
+    margin-top: 50px;
+}

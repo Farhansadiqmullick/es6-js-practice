@@ -1,0 +1,133 @@
+/*==============================================
+Post Block 3
+==============================================*/
+.widget-half-width{
+    width: 50%;
+    padding-right: 15px;
+    float: left;
+    + .widget-half-width{
+        padding-right: 0;
+        padding-left: 15px;
+    }
+}
+
+.posts-block-3-items{
+    margin-bottom: -24px;
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .post{
+        margin-bottom: 24px;
+        &:after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .post-thumb{
+            float: left;
+            width: 110px;
+            min-height: 75px;
+            display: block;
+            margin-right: 15px;
+            background-color: #999999;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            + .thumb-overlay{
+                width: calc(100% - 125px);
+            }
+        }
+        .thumb-overlay{
+            float: left;
+            width: 100%;
+        }
+        .post-date{
+            font-size: 13px;
+            margin: 0 0 3px;
+            color: #767676;
+            i{
+                margin-right: 4px;
+            }
+        }
+        .post-title{
+            color: $textPrimary;
+            margin: 0;
+            font-size: 14px;
+            a{
+                color: inherit;
+                &:hover{
+                    color: $themePrimary;
+                }
+            }
+        }
+        &:first-child{
+            .post-thumb-wrapper{
+                position: relative;
+                margin-bottom: 10px;
+            }
+            .post-thumb{
+                width: 100%;
+                margin: 0;
+                float: none;
+            }
+            .post-single-categories{
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+            .post-metas{
+                color: #767676;
+                font-size: 12px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 3px;
+                i{
+                    margin-right: 3px;
+                }
+            }
+            .post-date{
+                font-size: inherit;
+                margin: 0 0 0 8px;
+                color: inherit;
+            }
+            .post-meta {
+                + .post-meta{
+                    margin-left: 8px;
+                }
+            }
+            a.post-meta{
+                color: inherit;
+                &:hover{
+                    color: $themePrimary;
+                }
+            }
+            .post-title{
+                font-size: 20px;
+                line-height: 1.4;
+                margin: 0;
+                a{
+                    color: inherit;
+                }
+            }
+            .post-excerpt{
+                margin: 5px 0 0;
+                font-size: 13px;
+                color: #666666;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .widget-half-width{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        + .widget-half-width{
+            padding-left: 0;
+        }
+    }
+}

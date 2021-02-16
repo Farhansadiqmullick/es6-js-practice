@@ -1,0 +1,130 @@
+/*==============================================
+Post Block 4
+==============================================*/
+.section-4{
+    padding-top: 50px;
+}
+.posts-block-4-items{
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-bottom: -24px;
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .post{
+        width: calc(50% - 24px);
+        float: left;
+        margin: 0 12px 24px;
+        &:after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .post-thumb{
+            float: left;
+            width: 110px;
+            min-height: 75px;
+            display: block;
+            margin-right: 15px;
+            background-color: #999999;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            + .thumb-overlay{
+                width: calc(100% - 125px);
+            }
+        }
+        .thumb-overlay{
+            float: left;
+            width: 100%;
+        }
+        .post-date{
+            font-size: 13px;
+            margin: 0 0 3px;
+            color: #767676;
+            i{
+                margin-right: 4px;
+            }
+        }
+        .post-title{
+            color: $textPrimary;
+            margin: 0;
+            font-size: 14px;
+            a{
+                color: inherit;
+                &:hover{
+                    color: $themePrimary;
+                }
+            }
+        }
+        &:first-child{
+            position: relative;
+            .post-thumb-wrapper{
+                position: relative;
+                margin-bottom: 10px;
+            }
+            .post-thumb{
+                width: 100%;
+                margin: 0;
+                float: none;
+            }
+            .post-single-categories{
+                bottom: 10px;
+                right: 10px;
+                position: absolute;
+            }
+            .post-title{
+                font-size: 20px;
+                line-height: 1.4;
+                margin: 0;
+                a{
+                    color: inherit;
+                    &:hover{
+                        color: $themePrimary;
+                    }
+                }
+            }
+            .post-metas{
+                font-size: 12px;
+                display: flex;
+                justify-content: space-between;
+                color: #767676;
+                margin-bottom: 3px;
+                i{
+                    margin-right: 3px;
+                }
+            }
+            .post-date{
+                font-size: inherit;
+                margin: 0 0 0 8px;
+                color: inherit;
+            }
+            .post-meta {
+                + .post-meta{
+                    margin-left: 8px;
+                }
+            }
+            a.post-meta{
+                color: inherit;
+                &:hover{
+                    color: $themePrimary;
+                }
+            }
+            .post-excerpt{
+                margin-top: 5px;
+                font-size: 13px;
+                color: #666666;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .posts-block-4-items .post{
+        width: calc(100% - 24px);
+    }
+}

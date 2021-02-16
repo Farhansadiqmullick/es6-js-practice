@@ -1,0 +1,31 @@
+
+/*
+Theme Name: Jannah Lite
+Theme URI: https://wppool.dev/themes/jannah/
+Author: WPPool
+Author URI: https://wppool.dev
+Description: Jannah Lite is a perfect responsive magazine style WordPress theme. Suitable for news, newspaper, magazine, publishing, business and any kind of sites.
+Version: 1.0.0
+Tested up to: 5.5
+Requires PHP: 5.6
+License: GNU General Public License, version 3 (GPLv3)
+License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, post-formats, footer-widgets, blog, news
+Text Domain: jannah-lite
+*/
+
+@import "variables";
+@import 'global';
+@import "header";
+@import "breadcrumb";
+@import "post";
+@import "comment";
+@import "tiles";
+@import "post-block-1";
+@import "post-block-2";
+@import "post-block-3";
+@import "post-block-4";
+@import "post-block-5";
+@import "post-block-6";
+@import "sidebar";
+@import "footer";
